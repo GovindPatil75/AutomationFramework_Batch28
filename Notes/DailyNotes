@@ -1,0 +1,35 @@
+AutomationFramework :
+
+set of tools,guidelines and libraries --->we create ,maintain and execute test scripts
+Set of Rules --Files/Folders/Packages 
+
+3 Type :
+DataDriven Framework --- feed excel/text file/Csv
+Keyword Driven Framework --- keybasis execution 
+Hybrid Framework
+
+Maven : Build Managment tool -- Maven Project Create/Framework
+TestNG : Test Management tool
+src/main/java
+  com.elementRepo
+     LoginPom --- element Login webpage
+     HomePagePom ---Element Homepage Webpage
+  com.Utility
+    BaseClass ---- Browser Open/Close -- Object creation /CrossBrowser SetUp
+    ExcelDataProvider --- Excel sheet test data--- TC
+    ConfigDataProvider --- config.Properties --- Key=value
+    Library ---- reusable methods 
+    ExtentReportgenrator -- decorative -ExtentReports/ExtentSparkReporter
+    ReportListner --- Implements ITestListner -- status 
+src/main/resources
+src/test/java
+  com.Test
+    LoginTest extends BaseClass
+    HomePageTest extends BaseClass
+src/test/resources
+Pom.xml
+TestData ---Data.xlsx
+Config ---config.Properties
+Reports --- index.html
+MasterSuite.Xml
+CrossBrowserTest.Xml

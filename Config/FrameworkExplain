@@ -1,0 +1,28 @@
+Explain about Framework :
+==============================
+type of framework :in our project we are using Hybrid farmework with Test driven devlopment approach 
+                   by using page object model design pattern with pagefactory
+language :used Java language.
+pom :as per the page object model,we have maintained class for every webpage ,each web page has seprate class and 
+      that class holds members of that webpage,seprate classes for every individual test
+Maven :using maven we build,execution and dependancy purpose.integratingthe testng dependancyin pom.xml file and running the 
+        xml file using jenkins
+TestNG : test managment tool used for Assertion and grouping executions
+Packages : we have seprate packages like for test and pages ,all pom classes comes under com.PageObject package
+           and all Test realted classes comes under test packages .
+Utility : reason behind this to create utility is code resuability
+          we have utility packages in which we maintain some classes with reusable functionality
+          BaseClass --> which responsible for Browser open and closing ,also initializing the webdriver,implicit wait
+          also create the object of config data provider class and exceldataprovider class .
+
+properties file : we have config.properties file which have data realted with diffrent enviornment url
+                  file paths and login credentials to read this data we load this config.peroperties file to 
+                  configDataProvider class which palced under utility .
+TestData : we stored test Data under TestData folder in spredSheet ,we have ExcelDataProvider class under utility to 
+           read this test Data .
+Library : we created one library class under Utility ,which contains common user defined reuable methods 
+Reports : for reporting purpose we have Extent Reports ,its genrate beatiful html reports hich have logged
+           all test Steps execution with status and Screenshot in Base 64 format.
+version Control Tool : used git repository for version control and store scripts .
+Jenkins : by using jenkins we schedule daily Automation script in nightly runs .Test result shared to peers after executions.
+
